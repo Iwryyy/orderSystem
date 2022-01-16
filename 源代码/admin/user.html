@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width 设备宽度, user-scalable=no,
+    initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>用户页面</title>
+    <link rel="stylesheet" href="layui/css/layui.mobile.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/user.css">
+
+</head>
+
+<body>
+    <!-- 顶部 -->
+    <header>
+        <div class="th clearfix">
+            <span class="iconfont back">&#xe659;</span>
+            <div class="icon-box">
+                用户页
+            </div>
+        </div>
+        <div class="td clearfix">
+            <span class="user-img"></span>
+            <p>
+                <span class="userName" id="welcome">用户名</span>
+                <span class="tag">老顾客</span>
+            </p>
+        </div>
+        <div class="tr clearfix">
+            <!-- <span><span class="iconfont">&#xe604;</span>购物车</span>
+            <span><span class="iconfont">&#xe906;</span>收藏</span>
+            <span><span class="iconfont">&#xe767;</span>足迹</span>
+            <span><span class="iconfont">&#xe606;</span>红包卡卷</span> -->
+        </div>
+    </header>
+
+    <nav>
+        <div class="list">
+            <p class="clearfix">
+                <span class="tl">我的功能</span>
+                <span class="tr">></span>
+            </p>
+            <ul class="clearfix">
+                <li id="sheZhi"><span class="iconfont">&#xe99b;</span>个人信息</li>
+                <li id="pJ"><span class="iconfont">&#xe607;</span>待评价</li>
+                <li id="loginOut"><span class="iconfont">&#xe62a;</span>退出登录</li>
+            </ul>
+        </div>
+
+        <!-- <div class="list">
+            <p class="clearfix">
+                <span class="tl">我的设置</span>
+                <span class="tr">全部订单 ></span>
+            </p>
+            <ul class="clearfix">
+                待完善
+            </ul>
+        </div> -->
+
+        <div class="list">
+            <p class="clearfix">
+                <span class="tl">联系客服</span>
+                <!-- <span class="tr">全部订单 ></span> -->
+            </p>
+            <div class="ul">
+                <div>工作时间： 8：00 — 18：00</div>
+                <div>联系方式： 000-0000-0000</div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 引入flexible.js文件 -->
+    <script src="js/flexible.js"></script>
+    <script src="layui/layui.all.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/baseAPI.js"></script>
+    <script src="js/user.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>订单详情</title>
+    <link rel="stylesheet" href="dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="layui/css/layui.mobile.css">
+    <link rel="stylesheet" href="fonts/iconfont.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/MAXinform.css">
+
+</head>
+
+<body>
+    <!-- 头部 -->
+    <header>
+        <span class="iconfont back">&#xe659;</span>
+        <div class="icon-box">
+            订单详情
+        </div>
+    </header>
+
+    <div class="main">
+        <div class="mb" style="font-weight: 700;">订单明细</div>
+        <div class="mb gray">
+            <span class="th shopname">茶里斯</span>
+        </div>
+        <div class="foodbuy">
+            <!-- <div class="mb ">
+                <span class="th">手打红茶</span>
+                <span class="td gray">x1</span>
+                <span class="tr">￥7.2</span>
+            </div> -->
+        </div>
+        <div class="mb ">
+            <span class="th">配送费</span>
+            <span class="td">合计</span>
+            <span class="tr red">￥<i class="money">1</i></span>
+        </div>
+        <div class="mb ">
+            <span class="th">餐盒</span>
+            <span class="td">合计</span>
+            <span class="tr red">￥<i class="money">1</i></span>
+        </div>
+        <div class="mb">
+            <span id="total" style="float: right;">实付款￥<i>20.2</i> </span>
+        </div>
+
+        <div class="mb" style="font-weight: 700;">订单信息</div>
+        <div class="mes">
+            <!-- <div class="mb ">
+                <span class="tLeft">订单时间：</span>
+                <span class="tRight">1111111111</span>
+            </div>
+            <div class="mb ">
+                <span class="tLeft">订单状态：</span>
+                <span class="tRight">1111111111</span>
+            </div>
+            <div class="mb ">
+                <span class="tLeft">配送方式：</span>
+                <span class="tRight">1111111111</span>
+            </div>
+            <div class="mb ">
+                <span class="tLeft">配送用户：</span>
+                <span class="tRight">1111111111</span>
+            </div>
+            <div class="mb ">
+                <span class="tLeft">配送地址：</span>
+                <span class="tRight">1111111111</span>
+            </div> -->
+        </div>
+    </div>
+
+    <!-- <footer>
+        <div class="tl" id="total">
+            实付款￥20.2
+        </div>
+        <div class="tr" id="orderbtn">立即下单</div>
+    </footer> -->
+
+    <!-- 表格数据的模板 -->
+    <script type="text/html" id="tpl-table">
+        <div class="mb ">
+            <span class="th">{{food_name}}</span>
+            <span class="td gray num">x1</span>
+            <span class="tr" id="price">￥{{food_price}}</span>
+        </div>
+    </script>
+
+
+    <script type="text/html" id="mes-table">
+        <div class="mb ">
+            <span class="tLeft">订单时间：</span>
+            <span class="tRight">{{created}}</span>
+        </div>
+        <div class="mb ">
+            <span class="tLeft">订单状态：</span>
+            <span class="tRight" id="orderStatus">{{status}}</span>
+        </div>
+        <div class="mb ">
+            <span class="tLeft">配送方式：</span>
+            <span class="tRight" id="order_type">{{order_type}}</span>
+        </div>
+        <div class="mb ">
+            <span class="tLeft">配送地址：</span>
+            <span class="tRight">{{admin_address}}</span>
+        </div>
+        </div>
+    </script>
+    <script src="js/flexible.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="layui/template-web.js"></script>
+    <script src="js/baseAPI.js"></script>
+    <script src="js/MAXinfom.js"></script>
+</body>
+
+</html>

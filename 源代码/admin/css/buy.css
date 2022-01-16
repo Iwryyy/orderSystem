@@ -1,0 +1,240 @@
+        .clearfix:before,
+        .clearfix:after {
+            content: "";
+            display: table;
+        }
+        
+        .clearfix:after {
+            clear: both;
+        }
+        
+        .clearfix {
+            *zoom: 1;
+        }
+        
+        @font-face {
+            font-family: 'iconfont';
+            src: url('../fonts/iconfont.woff2?t=1632669694038') format('woff2'), url('../fonts/iconfont.woff?t=1632669694038') format('woff'), url('../fonts/iconfont.ttf?t=1632669694038') format('truetype');
+        }
+        
+        a {
+            color: black;
+            font-weight: 700;
+            text-decoration: none;
+        }
+        
+        .iconfont {
+            font-family: "iconfont" !important;
+            /* font-size: 16px; */
+            font-style: normal;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        
+        * {
+            box-sizing: border-box;
+        }
+        
+        ul,
+        p {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        /* 若超过750px 按照750走 */
+        
+        @media screen and (min-width: 750px) {
+            html {
+                font-size: 75px!important;
+            }
+        }
+        
+        body {
+            min-width: 320px;
+            max-width: 750px;
+            width: 10rem;
+            margin: 0 auto;
+            line-height: 1.5;
+            font-family: Arial, Helvetica;
+            background: #f2f2f2;
+            height: 2000px;
+            /* background-color: #f9f9f9; */
+            /* background: -webkit-linear-gradient(top, chartreuse, aquamarine); */
+        }
+        /* 头部 */
+        
+        header {
+            z-index: 999;
+            position: fixed;
+            top: 0;
+            left: 50%;
+            transform: translate(-50%);
+            width: 10rem;
+            height: 1.333333rem;
+            background: -webkit-linear-gradient(top, #1c85d8, #0c96d3);
+            line-height: 1.333333rem;
+            padding-right: 5%;
+            padding-left: 5%;
+            font-size: .666667rem;
+            color: #fff;
+        }
+        
+        .back {
+            float: left;
+        }
+        
+        .icon-box {
+            float: right;
+            font-size: .333333rem;
+        }
+        /* tab */
+        
+        .tab {
+            margin-top: 1.333333rem;
+            /* height: 150px; */
+            /* background-color: #fff; */
+            /* border-bottom: 1px solid #ccc; */
+        }
+        
+        .tab>div {
+            float: left;
+            width: 33.3%;
+            text-align: center;
+            font-size: .266667rem;
+        }
+        
+        .tab>div>span:nth-child(1) {
+            display: block;
+            /* height: 50px; */
+            font-size: .666667rem;
+        }
+        
+        .current {
+            background: #fff;
+            color: #0c96d3;
+            border-bottom: 1px solid #ccc;
+        }
+        /* .list */
+        
+        .list {
+            margin-bottom: .266667rem;
+        }
+        
+        .list .message {
+            margin-top: .333333rem;
+            padding: .133333rem;
+            height: 1.333333rem;
+            background-color: #fff;
+            font-size: .266667rem;
+            line-height: .466667rem;
+            border-bottom: .133333rem solid #0c96d3;
+        }
+        
+        .adress {
+            width: 100%;
+            height: 100%;
+            border: 0px;
+            outline: none;
+        }
+        
+        .message>span:nth-child(2) {
+            float: right;
+            font-size: .666667rem;
+            line-height: 0px;
+        }
+        
+        .list .radio {
+            padding: .133333rem;
+            height: 1.333333rem;
+            background-color: #fff;
+            font-size: .266667rem;
+            font-weight: 700;
+        }
+        /* .radio>span {
+            float: left;
+            width: 50%;
+        } */
+        /* nav */
+        
+        nav {
+            margin-bottom: .266667rem;
+        }
+        
+        .mb {
+            padding: .133333rem;
+            height: 1rem;
+            line-height: .866667rem;
+            font-size: .266667rem;
+            background-color: #fff;
+            border-bottom: 1px solid #ccc;
+        }
+        
+        .mb>span {
+            float: left;
+        }
+        
+        .mb .th {
+            width: 60%;
+        }
+        
+        .mb .td {
+            width: 30%;
+            text-align: right;
+        }
+        
+        .mb .thh {
+            width: 40%;
+        }
+        
+        .mb .tdd {
+            width: 60%;
+            text-align: right;
+        }
+        
+        .mb .tr {
+            width: 10%;
+            text-align: right;
+        }
+        
+        .big {
+            font-size: .666667rem;
+        }
+        
+        .gray {
+            color: #ccc;
+        }
+        
+        .red {
+            color: red;
+        }
+        /* main */
+        /* footer */
+        
+        footer {
+            z-index: 999;
+            position: fixed;
+            bottom: 0;
+            left: 50%;
+            transform: translate(-50%);
+            width: 10rem;
+            height: 1.333333rem;
+            line-height: 1.333333rem;
+            background-color: #fff;
+        }
+        
+        footer>div {
+            text-align: center;
+            float: left;
+            width: 50%;
+            /* height: 100%; */
+            font-size: .333333rem;
+            color: #fff;
+        }
+        
+        footer .tl {
+            background-color: slategray;
+        }
+        
+        footer .tr {
+            background-color: red;
+        }

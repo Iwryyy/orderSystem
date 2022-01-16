@@ -1,0 +1,282 @@
+.clearfix:before,
+.clearfix:after {
+    content: "";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    *zoom: 1;
+}
+
+@font-face {
+    font-family: 'iconfont';
+    src: url('../fonts/iconfont.woff2?t=1632669694038') format('woff2'), url('../fonts/iconfont.woff?t=1632669694038') format('woff'), url('../fonts/iconfont.ttf?t=1632669694038') format('truetype');
+}
+
+a {
+    color: black;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.iconfont {
+    font-family: "iconfont" !important;
+    /* font-size: 16px; */
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+ul,
+p {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+
+/* 若超过750px 按照750走 */
+
+@media screen and (min-width: 750px) {
+    html {
+        font-size: 75px!important;
+    }
+}
+
+body {
+    min-width: 320px;
+    max-width: 750px;
+    width: 10rem;
+    margin: 0 auto;
+    line-height: 1.5;
+    font-family: Arial, Helvetica;
+    background: #f2f2f2;
+    height: 2000px;
+    /* background-color: #f9f9f9; */
+    /* background: -webkit-linear-gradient(top, chartreuse, aquamarine); */
+}
+
+
+/* 头部 */
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%);
+    width: 10rem;
+    display: flex;
+    padding: .266667rem;
+    height: 1.133333rem;
+    background-color: #fff;
+    z-index: 999;
+}
+
+.header>.iconfont:nth-child(1) {
+    position: absolute;
+    top: .093333rem;
+    left: 0;
+    font-size: .666667rem;
+}
+
+
+/* 简介模块 */
+
+.jianjie {
+    position: relative;
+    padding: .266667rem;
+    font-size: .266667rem;
+    margin-top: 1.333333rem;
+    /* height: 400px; */
+    background-color: #fff;
+    color: #ccc;
+    border-top-left-radius: 10%;
+    border-top-right-radius: 10%;
+}
+
+.jianjie .img {
+    position: absolute;
+    top: -0.2rem;
+    right: 1.333333rem;
+    width: 2.266667rem;
+    height: 2.266667rem;
+    background-color: #fff;
+    border-radius: 5%;
+    overflow: hidden;
+}
+
+img {
+    height: 100%;
+    width: 100%;
+}
+
+.jianjie>div:nth-child(2) {
+    color: black;
+    font-size: .666667rem;
+    font-weight: 700;
+}
+
+.jianjie .box {
+    /* display: flex; */
+    color: orange;
+    width: 3.066667rem;
+    border: 1px solid orange;
+    border-radius: .266667rem;
+    text-align: center;
+}
+
+.box span {
+    /* flex: 1; */
+    width: .666667rem;
+    padding: 0 .133333rem;
+}
+
+.box span:nth-child(1) {
+    border-right: 1px solid orange;
+}
+
+.box span:nth-child(2) {
+    border-right: 1px solid orange;
+}
+
+
+/* 头部分页模块 */
+
+.th {
+    margin-top: .266667rem;
+    padding: .133333rem .266667rem;
+    border-bottom: 1px solid #ccc;
+}
+
+.th>div {
+    float: left;
+    margin: 0 .4rem;
+    color: #ccc;
+    font-size: .333333rem;
+}
+
+.th>div:nth-child(1) {
+    margin-left: 0;
+    color: black;
+    font-weight: 700;
+}
+
+
+/* 主要内容模块 */
+
+.td {
+    background-color: chartreuse;
+    font-size: .266667rem;
+}
+
+.td>div {
+    float: left;
+}
+
+.tLeft {
+    width: 17%;
+    /* background-color: aquamarine; */
+}
+
+.tLeft li {
+    height: .8rem;
+    line-height: .8rem;
+    font-size: .266667rem;
+    border-bottom: 1px solid #ccc;
+    text-align: center;
+}
+
+.tLeft li:nth-child(1) {
+    background-color: #fff;
+    font-weight: 700;
+}
+
+.tRight {
+    width: 83%;
+    /* background-color: blanchedalmond; */
+}
+
+.tRight>div>div {
+    padding: .133333rem;
+    border-bottom: 1px solid #ccc;
+}
+
+.list {
+    background-color: #fff;
+    height: .466667rem;
+    line-height: .466667rem;
+    padding-left: .133333rem;
+}
+
+.left {
+    float: left;
+    width: 30%;
+    height: 2.133333rem;
+    /* background-color: blue; */
+    /* margin-right: .133333rem; */
+    border-radius: .2rem;
+    overflow: hidden;
+}
+
+.left img {
+    width: 100%;
+    height: 100%;
+}
+
+.right {
+    float: right;
+    padding: 0 .133333rem;
+    width: 70%;
+    position: relative;
+}
+
+.right p {
+    font-size: .466667rem;
+}
+
+.right .place {
+    /* height: .8rem; */
+    font-size: .266667rem;
+    /* border-radius: .133333rem; */
+    /* background: rgba(0, 0, 0, .1); */
+    margin: .133333rem 0 .266667rem;
+}
+
+.right .place span {
+    font-size: .266667rem;
+}
+
+.right .price span {
+    font-size: .333333rem;
+    color: #1c85d8;
+}
+
+.right .price i {
+    font-style: normal;
+    text-decoration: line-through;
+    color: gray;
+}
+
+.right button {
+    position: absolute;
+    top: 50%;
+    right: .266667rem;
+    transform: translateY(-50%);
+    border: 0;
+    color: #fff;
+    border-radius: .133333rem;
+    /* float: right; */
+    /* margin-top: -0.746667rem; */
+    background-color: #1c85d8;
+    width: 1.253333rem;
+    height: .68rem;
+    font-size: .266667rem;
+}

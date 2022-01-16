@@ -1,0 +1,102 @@
+.clearfix:before,
+.clearfix:after {
+    content: "";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    *zoom: 1;
+}
+
+@font-face {
+    font-family: 'iconfont';
+    src: url('../fonts/iconfont.woff2?t=1632669694038') format('woff2'), url('../fonts/iconfont.woff?t=1632669694038') format('woff'), url('../fonts/iconfont.ttf?t=1632669694038') format('truetype');
+}
+
+a {
+    color: black;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.iconfont {
+    font-family: "iconfont" !important;
+    /* font-size: 16px; */
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+ul,
+p {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+
+/* 若超过750px 按照750走 */
+
+@media screen and (min-width: 750px) {
+    html {
+        font-size: 75px!important;
+    }
+}
+
+body {
+    min-width: 320px;
+    max-width: 750px;
+    width: 10rem;
+    margin: 0 auto;
+    line-height: 1.5;
+    font-family: Arial, Helvetica;
+    /* background: #f2f2f2; */
+    height: 2000px;
+    /* background-color: #f9f9f9; */
+    /* background: -webkit-linear-gradient(top, chartreuse, aquamarine); */
+}
+
+.reg {
+    display: none;
+}
+
+.login {
+    margin: 0 auto;
+    padding: .666667rem;
+}
+
+.aalogo {
+    position: absolute;
+    top: 1%;
+    left: 23%;
+    transform: translate(-50%);
+    width: 4.7rem;
+    height: 2rem;
+    background-color: #fff;
+    background: url(../images/aalogo.png) no-repeat;
+    background-size: contain;
+}
+
+.logo {
+    margin-top: 1.333333rem;
+    font-size: .666667rem;
+    color: black;
+    /* background-color: pink; */
+    font-weight: 700;
+    text-align: center;
+}
+
+#regUser,
+#loginUser {
+    float: right;
+    font-size: .333333rem;
+    line-height: .8rem;
+}

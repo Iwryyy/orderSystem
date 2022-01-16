@@ -1,0 +1,42 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    padding: 15px;
+    background-color: #f2f3f5;
+}
+
+.layui-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#form-more,
+#form-edit {
+    padding-top: 20px;
+    padding-right: 30px;
+}
+
+.Cbox {
+    display: flex;
+    justify-content: center;
+    /* 水平居中 */
+    align-items: center;
+    /* 垂直居中 */
+}
+
+.Cbox button {
+    margin: 10px;
+    /* display: block; */
+    flex: 1;
+    height: 30px;
+    font-size: 15px;
+    color: white;
+    border-radius: 25px;
+    border: none;
+    background-color: #009688;
+}

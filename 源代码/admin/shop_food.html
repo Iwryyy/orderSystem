@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>点餐页面</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/shop_food.css">
+    <link rel="stylesheet" href="css/swiper.min.css">
+
+
+
+</head>
+
+<body>
+    <!-- 返回模块-->
+    <header>
+        <span class="iconfont back">&#xe659;</span>
+        <div class="icon-box">
+            点餐页面
+        </div>
+    </header>
+
+
+    <!-- 商家简介模块 -->
+    <div class="jianjie clearfix">
+        <!-- <div class="img"><img src="images/foot.jpg" alt=""></div>
+        <div>炸鸡店</div>
+        <div>起送￥25 | 配送￥1</div>
+        <div>营业时间：10:30-22:30</div>
+        <div>联系电话</div>
+        <div>
+            <div class="box"><span>3减1</span><span>10减3</span><span>20减7</span></div>
+        </div>
+        <div>公告：XXXXXXXXXXXXXXXXxx</div> -->
+
+    </div>
+    <!-- 头部分页模块 -->
+    <div class="th clearfix">
+        <div class="xZ">点菜</div>
+        <div>评价</div>
+    </div>
+    <!-- 主要内容模块 -->
+    <div class="td">
+        <div class="xiaDan">
+            <div class="tLeft">
+                <ul id="tl">
+                    <!-- <li class="current">纯茶</li>
+                    <li>波波篇</li>
+                    <li>鲜果篇</li>
+                    <li>忌廉篇</li> -->
+                </ul>
+            </div>
+            <div class="tRight">
+
+            </div>
+        </div>
+        <div class="pingJia ">
+            <ul id="lY">
+                <!-- <li class="clearfix">
+                    <div class="tLL">
+                        <span>原</span>
+                    </div>
+                    <div class="tRR">
+                        <div class="top clearfix">
+                            <span class="Puser">匿名用户</span>
+                            <span class="Ptime">time</span>
+                        </div>
+                        <div class="zongTi clearfix">
+                            <input type="hidden" class="totalScore" value="7">
+
+                            <span class="leibie">总体：</span>
+                            <div class="mark">
+                                <ul class="clearfix">
+                                    <li class="emptyStar"><a href="javascript:;">1</a><a href="javascript:;">2</a></li>
+                                    <li class="emptyStar"><a href="javascript:;">3</a><a href="javascript:;">4</a></li>
+                                    <li class="emptyStar"><a href="javascript:;">5</a><a href="javascript:;">6</a></li>
+                                    <li class="emptyStar"><a href="javascript:;">7</a><a href="javascript:;">8</a></li>
+                                    <li class="emptyStar"><a href="javascript:;">9</a><a href="javascript:;">10</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="kouWei clearfix">
+                            <input type="hidden" class="totalScore" value="3">
+
+                            <span class="leibie">口味：</span>
+                            <div class="mark">
+                                <ul class="clearfix">
+                                    <li class="emptyStar"><a href="javascript:;">1</a><a href="javascript:;">2</a></li>
+                                    <li class="emptyStar"><a href="javascript:;">3</a><a href="javascript:;">4</a></li>
+                                    <li class="emptyStar"><a href="javascript:;">5</a><a href="javascript:;">6</a></li>
+                                    <li class="emptyStar"><a href="javascript:;">7</a><a href="javascript:;">8</a></li>
+                                    <li class="emptyStar"><a href="javascript:;">9</a><a href="javascript:;">10</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="peiSong clearfix">
+
+                            <input type="hidden" class="totalScore" value="2">
+
+                            <span class="leibie">配送：</span>
+                            <div class="mark">
+                                <ul class="clearfix">
+                                    <li class="emptyStar"><a href="javascript:;">1</a><a href="javascript:;">2</a></li>
+                                    <li class="emptyStar"><a href="javascript:;">3</a><a href="javascript:;">4</a></li>
+                                    <li class="emptyStar"><a href="javascript:;">5</a><a href="javascript:;">6</a></li>
+                                    <li class="emptyStar"><a href="javascript:;">7</a><a href="javascript:;">8</a></li>
+                                    <li class="emptyStar"><a href="javascript:;">9</a><a href="javascript:;">10</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="Mes">留言模块</div>
+                </li> -->
+            </ul>
+        </div>
+    </div>
+
+    <!-- 购物车底部 -->
+    <footer>
+        <div class="tl">
+            <span class="iconfont">&#xe604;<span class="yuan">1</span></span>
+            <span class="money">￥00.00</span>
+        </div>
+        <div class="tr">去结算</div>
+    </footer>
+
+    <!-- 购物车页面 -->
+    <div class="login-bg"></div>
+    <div class="buy">
+        <div><span>购物车</span><span class="clear">清空购物车</span></div>
+        <div class="buyList">
+            <!-- <div class="buy-list">
+                <input type="hidden" name="id">
+                <span class="myName">可乐奶茶</span>
+                <span class="myPrice">￥8.00</span>
+                <span class="myNumber">- <i>1</i> +</span>
+            </div>
+            <div class="buy-list">
+                <span class="myName">可乐奶茶</span>
+                <span class="myPrice">￥8.00</span>
+                <span class="myNumber">- <i>1</i> +</span>
+            </div> -->
+        </div>
+
+    </div>
+    <!-- 表格数据的模板 -->
+    <script type="text/html" id="tpl-table">
+        <div class="img"><img src="images/{{shop_pic}}.png" alt=""></div>
+        <div>{{nickname}}</div>
+        <div>{{adress}} | 起送￥{{qiS}} | 配送￥{{PeiS}}</div>
+        <div>营业时间：10:30-22:30</div>
+        <div>联系电话：{{phone}}</div>
+        <div>
+            <!-- <div class="box"><span>3减1</span><span>10减3</span><span>20减7</span></div> -->
+        </div>
+        <div>公告：{{gongGao}}</div>
+    </script>
+
+    <script type="text/html" id="tl-table">
+        {{each data}}
+        <li class="current">{{$value.name}}</li>
+        {{/each}}
+    </script>
+
+    <script type="text/html" id="food-table">
+        <div class="clearfix">
+            <div class="left">
+                <img src="images/fImg/{{food_pic}}.png" alt="">
+            </div>
+            <div class="right">
+                <input type="hidden" name="id" value="{{id}}" id="foodid">
+                <p id="myName">{{food_name}}</p>
+                <div class="place">热销评分：{{score}}</div>
+                <div class="price"><span>￥{{food_price}}</span></div>
+                <div class="button"><button class="jian">-</button> <i id="num">0</i> <button class="jia">+</button></div>
+            </div>
+        </div>
+    </script>
+
+    <script type="text/html" id="score-table">
+        {{each data}}
+        <li class="clearfix">
+            <div class="tLL">
+                <span id="userImg">{{$value.admin_id}}</span>
+            </div>
+            <div class="tRR">
+                <div class="top clearfix">
+                    <span class="Puser">{{$value.admin_id}}</span>
+                    <span class="Ptime">{{$value.time}}</span>
+                </div>
+                <div class="zongTi clearfix">
+                    <input type="hidden" class="totalScore" value="{{$value.total}}">
+                    <span class="leibie">总体：</span>
+                    <div class="mark">
+                        <ul class="clearfix">
+                            <li class="emptyStar"><a href="javascript:;">1</a><a href="javascript:;">2</a></li>
+                            <li class="emptyStar"><a href="javascript:;">3</a><a href="javascript:;">4</a></li>
+                            <li class="emptyStar"><a href="javascript:;">5</a><a href="javascript:;">6</a></li>
+                            <li class="emptyStar"><a href="javascript:;">7</a><a href="javascript:;">8</a></li>
+                            <li class="emptyStar"><a href="javascript:;">9</a><a href="javascript:;">10</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="kouWei clearfix">
+                    <input type="hidden" class="foodScore" value="{{$value.food}}">
+
+                    <span class="leibie">口味：</span>
+                    <div class="mark">
+                        <ul class="clearfix">
+                            <li class="emptyStar"><a href="javascript:;">1</a><a href="javascript:;">2</a></li>
+                            <li class="emptyStar"><a href="javascript:;">3</a><a href="javascript:;">4</a></li>
+                            <li class="emptyStar"><a href="javascript:;">5</a><a href="javascript:;">6</a></li>
+                            <li class="emptyStar"><a href="javascript:;">7</a><a href="javascript:;">8</a></li>
+                            <li class="emptyStar"><a href="javascript:;">9</a><a href="javascript:;">10</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="peiSong clearfix">
+                    <input type="hidden" class="DScore" value="{{$value.deliver}}">
+
+                    <span class="leibie">配送：</span>
+                    <div class="mark">
+                        <ul class="clearfix">
+                            <li class="emptyStar"><a href="javascript:;">1</a><a href="javascript:;">2</a></li>
+                            <li class="emptyStar"><a href="javascript:;">3</a><a href="javascript:;">4</a></li>
+                            <li class="emptyStar"><a href="javascript:;">5</a><a href="javascript:;">6</a></li>
+                            <li class="emptyStar"><a href="javascript:;">7</a><a href="javascript:;">8</a></li>
+                            <li class="emptyStar"><a href="javascript:;">9</a><a href="javascript:;">10</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="Mes">{{if $value.miaoSu==null}} 没有留言 {{else if $value.miaoSu!=null}} {{$value.miaoSu}} {{/if}}</div>
+        </li>
+        {{/each}}
+    </script>
+
+
+
+    <script src="js/flexible.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="layui/template-web.js"></script>
+    <script src="js/baseAPI.js"></script>
+    <script src="js/shop_food.js"></script>
+</body>
+
+</html>

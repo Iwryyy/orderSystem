@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>添加评论</title>
+    <link rel="stylesheet" href="dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="layui/css/layui.mobile.css">
+    <link rel="stylesheet" href="fonts/iconfont.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/score.css">
+
+</head>
+
+<body>
+    <!-- 头部 -->
+    <header>
+        <span class="iconfont back">&#xe659;</span>
+        <div class="icon-box">
+            添加评论
+        </div>
+    </header>
+
+    <div class="main">
+        <div class="top">
+            <span>你对商家/菜品满意吗？</span>
+        </div>
+        <div class="mes">
+            <div class="th">
+                <img src="" alt="" class="img"> <span id="shopname"> 店铺名</span>
+            </div>
+            <div class="zongTi clearfix pF">
+                <span class="leibie">总体：</span>
+                <div class="mark">
+                    <ul class="clearfix">
+                        <li class="emptyStar"><a href="javascript:;">1</a><a href="javascript:;">2</a></li>
+                        <li class="emptyStar"><a href="javascript:;">3</a><a href="javascript:;">4</a></li>
+                        <li class="emptyStar"><a href="javascript:;">5</a><a href="javascript:;">6</a></li>
+                        <li class="emptyStar"><a href="javascript:;">7</a><a href="javascript:;">8</a></li>
+                        <li class="emptyStar"><a href="javascript:;">9</a><a href="javascript:;">10</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="kouWei clearfix pF">
+                <span class="leibie">口味：</span>
+                <div class="mark">
+                    <ul class="clearfix">
+                        <li class="emptyStar"><a href="javascript:;">1</a><a href="javascript:;">2</a></li>
+                        <li class="emptyStar"><a href="javascript:;">3</a><a href="javascript:;">4</a></li>
+                        <li class="emptyStar"><a href="javascript:;">5</a><a href="javascript:;">6</a></li>
+                        <li class="emptyStar"><a href="javascript:;">7</a><a href="javascript:;">8</a></li>
+                        <li class="emptyStar"><a href="javascript:;">9</a><a href="javascript:;">10</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="peiSong clearfix pF">
+                <span class="leibie">配送：</span>
+                <div class="mark">
+                    <ul class="clearfix">
+                        <li class="emptyStar"><a href="javascript:;">1</a><a href="javascript:;">2</a></li>
+                        <li class="emptyStar"><a href="javascript:;">3</a><a href="javascript:;">4</a></li>
+                        <li class="emptyStar"><a href="javascript:;">5</a><a href="javascript:;">6</a></li>
+                        <li class="emptyStar"><a href="javascript:;">7</a><a href="javascript:;">8</a></li>
+                        <li class="emptyStar"><a href="javascript:;">9</a><a href="javascript:;">10</a></li>
+                    </ul>
+                </div>
+            </div>
+            <textarea class="form-control" rows="3" placeholder="可描述问题，对店家进行客观评分。"></textarea>
+        </div>
+    </div>
+    <button class="btn">提 交</button>
+
+
+    <!-- 表格数据的模板 -->
+    <script type="text/html" id="tpl-table">
+        <div class="mb ">
+            <span class="th">{{food_name}}</span>
+            <span class="td gray num">x1</span>
+            <span class="tr" id="price">￥{{food_price}}</span>
+        </div>
+    </script>
+
+
+    <script type="text/html" id="mes-table">
+        <div class="mb ">
+            <span class="tLeft">订单时间：</span>
+            <span class="tRight">{{created}}</span>
+        </div>
+        <div class="mb ">
+            <span class="tLeft">订单状态：</span>
+            <span class="tRight" id="orderStatus">{{status}}</span>
+        </div>
+        <div class="mb ">
+            <span class="tLeft">配送方式：</span>
+            <span class="tRight" id="order_type">{{order_type}}</span>
+        </div>
+        <div class="mb ">
+            <span class="tLeft">配送地址：</span>
+            <span class="tRight">{{admin_address}}</span>
+        </div>
+        </div>
+    </script>
+    <script src="js/flexible.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="layui/template-web.js"></script>
+    <script src="js/baseAPI.js"></script>
+    <script src="js/score.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width 设备宽度, user-scalable=no,
+    initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>订单页面</title>
+    <link rel="stylesheet" href="layui/css/layui.mobile.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/inform.css">
+</head>
+
+<body>
+    <!-- 返回模块-->
+    <header>
+        <span class="iconfont back">&#xe659;</span>
+        <div class="icon-box">
+            消息页面
+        </div>
+    </header>
+    <div class="main">
+        <ul class="clearfix" id="ul">
+            <!-- <li class="clearfix">
+                <div class="img"><img src="images/naicha.jpg" alt=""></div>
+                <div class="inform">
+                    <div>
+                        测试店铺
+                        <span class=" right">待配送</span>
+                    </div>
+                    <div>
+                        <i>菜品1，菜品2</i><span class="right">共2件</span>
+                    </div>
+                </div>
+                <div class="iPrice">实付￥14.5元 </div>
+                <div class="bot">
+                    <div class="time">昨天</div>
+                    <div class="btn">
+                        <button>查看详情</button>
+                        <button>我要评价</button>
+                        <button>再来一单</button>
+                    </div>
+                </div>
+            </li>
+        -->
+        </ul>
+    </div>
+
+    <!-- 表格数据的模板 -->
+    <script type="text/html" id="tpl-table">
+        {{each data}}
+
+        <li class="clearfix">
+            <input type="hidden" value='{{$value.order_type}}' id='orderType'>
+            <div class="img"><img src="" alt=""></div>
+            <div class="inform">
+                <div>
+                    <span id="shop_id">{{$value.shop_id}}</span>
+                    <span class=" right" id="orderStatus">{{$value.status}}</span>
+                </div>
+                <div>
+                    <i id="foodid">{{$value.food_id}}</i><span class="right">共<i id="NUM">{{$value.food_num}}</i>件</span>
+                </div>
+            </div>
+            <div class="iPrice">实付￥{{$value.food_Price}}元 </div>
+            <div class="bot">
+                <div class="time">{{$value.created}}</div>
+                <div class="btn">
+                    <button class="more" data-id="{{$value.food_id}}" data-num="{{$value.food_num}}" data-order="{{$value.id}}">查看详情</button>
+                    <button class="dianPing " data-order="{{$value.id}}" data-shop="{{$value.shop_id}}" data-is="{{$value.is_pingLun}}">{{if $value.is_pingLun==1}} 已评价 {{else if $value.is_pingLun==0}} 我要评价 {{/if}}</button>
+                </div>
+            </div>
+        </li>
+        {{/each}}
+        <!--    {{each data}}
+        <li>
+            <div class="img"><img src="images/foot.jpg" alt=""></div>
+            <div class="inform">
+                <div><span >{{$value.shop_id}}</span> <span class=" right">{{$value.created}}</span><br><i id="foodid">{{$value.food_id}}</i></div>
+            </div>
+        </li>
+        {{/each}} -->
+    </script>
+
+
+
+    <!-- 引入flexible.js文件 -->
+    <script src="layui/layui.all.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/flexible.js"></script>
+    <script src="layui/template-web.js"></script>
+    <script src="js/baseAPI.js"></script>
+    <script src="js/inform.js"></script>
+</body>
+
+</html>

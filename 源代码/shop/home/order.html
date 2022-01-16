@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/assets/lib/layui/css/layui.css" />
+    <link rel="stylesheet" href="/assets/css/order.css" />
+</head>
+
+<body>
+    <!-- 卡片区域 -->
+    <div class="layui-card">
+        <div class="layui-card-header">
+            <span>菜品类别管理</span>
+        </div>
+        <div class="layui-card-body">
+            <table class="layui-table">
+                <colgroup>
+                    <col />
+                    <col width="200" />
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th>订单号</th>
+                        <th>取餐模式</th>
+                        <th>状态</th>
+                        <th>操作</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>贤</td>
+                        <td>心</td>
+                        <td>人生就像是一场修行</td>
+                        <td>人生就像是一场修行</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <!-- 表格数据的模板 -->
+    <script type="text/html" id="tpl-table">
+        {{each data}}
+        <tr class="hahah">
+            <td>{{$value.created}}</td>
+            <td id="dOrder">{{if $value.order_type==0}}堂食{{else if $value.order_type==1}}自提{{else if $value.order_type==2}}外卖{{/if}}</td>
+            <td id="dStatus">{{if $value.status==0}}订单已提交{{else if $value.status==1}}已接单{{else if $value.status==2}}{{$value.status}}{{else if $value.status==3}}已完成{{/if}}</td>
+            <td>
+                <button type="button" class="layui-btn layui-btn-xs btn-delete" data-id="{{$value.id}}">更改状态</button>
+                <button type="button" class="layui-btn layui-btn-danger layui-btn-xs btn-more" data-id="{{$value.id}}">展开</button>
+            </td>
+        </tr>
+        {{/each}}
+    </script>
+
+    <script type="text/html" id="dialog-more">
+        <form class="layui-form" id="form-more" lay-filter="form-more">
+            <!-- 菜名 -->
+            <div class="layui-form-item">
+                <label class="layui-form-label">菜名</label>
+                <div class="layui-input-block">
+                    <input type="text" name="food_id" id="foodIDID" required lay-verify="required" placeholder="请输入订单号" autocomplete="off" class="layui-input" readonly>
+                </div>
+            </div>
+            <!-- 分数 -->
+            <div class="layui-form-item">
+                <label class="layui-form-label">份数</label>
+                <div class="layui-input-block">
+                    <input type="text" name="food_num" required lay-verify="required" placeholder="请输入订单号" autocomplete="off" class="layui-input" readonly>
+                </div>
+            </div>
+            <!-- 联系方式 -->
+            <div class="layui-form-item">
+                <label class="layui-form-label">联系方式</label>
+                <div class="layui-input-block">
+                    <input type="text" name="admin_phone" required lay-verify="required" placeholder="请输入订单号" autocomplete="off" class="layui-input" readonly>
+                </div>
+            </div>
+            <!-- 地址 -->
+            <div class="layui-form-item">
+                <label class="layui-form-label">地址</label>
+                <div class="layui-input-block">
+                    <input type="text" name="admin_address" required lay-verify="required" placeholder="请输入订单号" autocomplete="off" class="layui-input" readonly>
+                </div>
+            </div>
+            <!-- 备注 -->
+            <div class="layui-form-item">
+                <label class="layui-form-label">备注</label>
+                <div class="layui-input-block">
+                    <input type="text" name="tip" required lay-verify="required" placeholder="请输入订单号" autocomplete="off" class="layui-input" readonly>
+                </div>
+            </div>
+
+        </form>
+    </script>
+
+    <script type="text/html" id="change">
+        <div class="Cbox">
+            <button data-id="1">已接单</button>
+            <button data-id="2">处理中</button>
+            <button data-id="3">已完成</button>
+        </div>
+    </script>
+
+    <script type="text/html" id="dialog-edit">
+        <form class="layui-form" id="form-edit" lay-filter="form-edit">
+            <!-- 隐藏域，保存 Id 的值 -->
+            <input type="hidden" name="id">
+            <div class="layui-form-item">
+                <label class="layui-form-label">分类名称</label>
+                <div class="layui-input-block">
+                    <input type="text" name="name" required lay-verify="required" placeholder="请输入分类名称" autocomplete="off" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <div class="layui-input-block">
+                    <button class="layui-btn" lay-submit lay-filter="formDemo">确认修改</button>
+                </div>
+            </div>
+        </form>
+    </script>
+
+    <script src="/assets/lib/layui/layui.all.js"></script>
+    <script src="/assets/lib/template-web.js"></script>
+    <script src="/assets/lib/jquery.js"></script>
+    <script src="/assets/js/baseAPI.js"></script>
+    <script src="/assets/js/order.js"></script>
+
+</body>
+
+
+</html>

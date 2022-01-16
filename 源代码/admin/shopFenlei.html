@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width 设备宽度, user-scalable=no,
+    initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>分类页面</title>
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/shopFenlei.css">
+
+
+</head>
+
+<body>
+    <!-- 顶部搜索栏 -->
+    <header>
+        <span class="iconfont back">&#xe659;</span>
+        <div class="icon-box">
+            分类页面
+        </div>
+    </header>
+
+    <!-- 商品 -->
+    <div class="list">
+        <ul class="td">
+            <div class="td1">
+                <!-- <li class="clearfix">
+                    <div class="left">
+                        <img src="images/foot.jpg" alt="">
+                    </div>
+                    <div class="right">
+                        <p>麦乐鸡扒</p>
+                        <div class="place"><span>支持预定</span><span>支持自取</span></div>
+                        <div class="price">起送￥5/配送￥1</div>
+
+                    </div>
+                </li>
+                <li class="clearfix">
+                    <div class="left">
+                        <img src="images/foot.jpg" alt="">
+                    </div>
+                    <div class="right">
+                        <p>麦乐鸡扒</p>
+                        <div class="place"><span>支持预定</span><span>支持自取</span></div>
+                        <div class="price">起送￥5/配送￥1</div>
+
+                    </div>
+                </li>
+                <li class="clearfix">
+                    <div class="left">
+                        <img src="images/foot.jpg" alt="">
+                    </div>
+                    <div class="right">
+                        <p>麦乐鸡扒</p>
+                        <div class="place"><span>支持预定</span><span>支持自取</span></div>
+                        <div class="price">起送￥5/配送￥1</div>
+
+                    </div>
+                </li> -->
+            </div>
+        </ul>
+    </div>
+
+    <!-- 表格数据的模板 -->
+    <script type="text/html" id="tpl-table">
+        {{each data}}
+        <div>
+            <input type="hidden" name="id" value={{$value.id}} id="id">
+            <li class="clearfix">
+                <div class="left">
+                    <img src=images/{{$value.shop_pic}}.png alt="">
+                </div>
+                <div class="right">
+                    <p>{{$value.nickname}}</p>
+                    <div class="place">{{$value.adress}} <br><span> 起送￥1 | 配送￥1</span></div>
+                    <!-- <div class="price"><span>￥100</span><i>￥99</i></div> -->
+                </div>
+            </li>
+        </div>
+        {{/each}}
+    </script>
+
+
+
+    <script src="js/swiper.min.js"></script>
+    <!-- 引入flexible.js文件 -->
+    <script src="js/flexible.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="layui/template-web.js"></script>
+    <script src="js/baseAPI.js"></script>
+    <script src="js/shopFenlei.js"></script>
+</body>
+
+</html>

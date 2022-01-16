@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width 设备宽度, user-scalable=no,
+    initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/mail.css">
+    <!-- 引入flexible.js文件 -->
+    <script src="js/flexible.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script>
+        $(function() {
+            $(".main .list .left").click(function() {
+                $(this).addClass("current").siblings().removeClass("current");
+                var index = $(this).index();
+                $(".main .th>div").eq(index).show().siblings().hide();
+                // console.log($(".main .th").eq(index).html());
+
+            })
+        })
+
+        window.addEventListener('load', function() {
+            var fanhui = document.querySelector('.fanhui');
+            fanhui.addEventListener('click', function() {
+                window.location.href = "index.html";
+            })
+
+        });
+    </script>
+</head>
+
+<body>
+    <!-- 顶部搜索栏 -->
+    <header>
+        <span class="iconfont fanhui">&#xe659;</span>
+        <div class="search"><span class="iconfont"> &#xe63c; </span>复制快递单号，搜索更快</div>
+        <span class="iconfont ">&#xe99e;</span>
+    </header>
+    <!-- nav -->
+    <nav>
+        <ul class="clearfix">
+            <li>
+                <div>
+                    <span class="iconfont">&#xe997;</span>
+                    <p>取件码</p>
+                </div>
+            </li>
+            <li>
+                <div>
+                    <span class="iconfont">&#xe61e;</span>
+                    <p>查快递</p>
+                </div>
+            </li>
+            <li>
+                <div>
+                    <span class="iconfont">&#xe615;</span>
+                    <p>寄快递</p>
+                </div>
+            </li>
+        </ul>
+    </nav>
+    <!-- 内容 -->
+    <div class="main">
+        <div class="list">
+            <div class="left current">收件<span>1</span></div>
+            <div class="left">寄件<span>1</span></div>
+            <div class="right"><span>+</span></div>
+        </div>
+        <div class="th">
+            <div class="one">
+                <ul class="clearfix">
+                    <li class="clearfix">
+                        <div class="left">
+                            <img src="images/foot.jpg" alt="">
+                        </div>
+                        <div class="right">
+                            <p>已签收</p>
+                            <div class="place">淘宝 | 买给亲友的XXxx</div>
+                            <div class="price">韵达快递: 2021-09-12 18:24:12签收<span class="iconfont">&#xe6da;</span></div>
+                        </div>
+                    </li>
+                    <li class="clearfix">
+                        <div class="left">
+                            <img src="images/foot.jpg" alt="">
+                        </div>
+                        <div class="right">
+                            <p>已签收</p>
+                            <div class="place">淘宝 | 买给亲友的XXxx</div>
+                            <div class="price">韵达快递: 2021-09-12 18:24:12签收<span class="iconfont">&#xe6da;</span></div>
+                        </div>
+                    </li>
+                    <li class="clearfix">
+                        <div class="left">
+                            <img src="images/foot.jpg" alt="">
+                        </div>
+                        <div class="right">
+                            <p>已签收</p>
+                            <div class="place">淘宝 | 买给亲友的XXxx</div>
+                            <div class="price">韵达快递: 2021-09-12 18:24:12签收<span class="iconfont">&#xe6da;</span></div>
+                        </div>
+                    </li>
+                    <li class="clearfix">
+                        <div class="left">
+                            <img src="images/foot.jpg" alt="">
+                        </div>
+                        <div class="right">
+                            <p>已签收</p>
+                            <div class="place">淘宝 | 买给亲友的XXxx</div>
+                            <div class="price">韵达快递: 2021-09-12 18:24:12签收<span class="iconfont">&#xe6da;</span></div>
+                        </div>
+                    </li>
+                </ul>
+                <div class="end">查看全部包裹></div>
+            </div>
+            <div class="two">
+                <ul class="clearfix">
+                    <li class="clearfix">
+                        <div class="left">
+                            <img src="images/foot.jpg" alt="">
+                        </div>
+                        <div class="right">
+                            <p>已送达</p>
+                            <div class="place">淘宝 | 买给11友的XXxx</div>
+                            <div class="price">韵达快递: 2021-09-12 18:24:12签收<span class="iconfont">&#xe6da;</span></div>
+                        </div>
+                    </li>
+                    <li class="clearfix">
+                        <div class="left">
+                            <img src="images/foot.jpg" alt="">
+                        </div>
+                        <div class="right">
+                            <p>已送达</p>
+                            <div class="place">淘宝 | 买给亲友的XXxx</div>
+                            <div class="price">韵达快递: 2021-09-12 18:24:12签收<span class="iconfont">&#xe6da;</span></div>
+                        </div>
+                    </li>
+                    <li class="clearfix">
+                        <div class="left">
+                            <img src="images/foot.jpg" alt="">
+                        </div>
+                        <div class="right">
+                            <p>已送达</p>
+                            <div class="place">淘宝 | 买给亲友的XXxx</div>
+                            <div class="price">韵达快递: 2021-09-12 18:24:12签收<span class="iconfont">&#xe6da;</span></div>
+                        </div>
+                    </li>
+                    <li class="clearfix">
+                        <div class="left">
+                            <img src="images/foot.jpg" alt="">
+                        </div>
+                        <div class="right">
+                            <p>已送达</p>
+                            <div class="place">淘宝 | 买给亲友的XXxx</div>
+                            <div class="price">韵达快递: 2021-09-12 18:24:12签收<span class="iconfont">&#xe6da;</span></div>
+                        </div>
+                    </li>
+                </ul>
+                <div class="end">查看全部包裹></div>
+            </div>
+        </div>
+        <div class="td"></div>
+    </div>
+</body>
+
+</html>

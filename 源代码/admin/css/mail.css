@@ -1,0 +1,250 @@
+.clearfix:before,
+.clearfix:after {
+    content: "";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    *zoom: 1;
+}
+
+@font-face {
+    font-family: 'iconfont';
+    src: url('../fonts/iconfont.woff2?t=1632669694038') format('woff2'), url('../fonts/iconfont.woff?t=1632669694038') format('woff'), url('../fonts/iconfont.ttf?t=1632669694038') format('truetype');
+}
+
+a {
+    color: black;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.iconfont {
+    font-family: "iconfont" !important;
+    /* font-size: 16px; */
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+ul,
+p {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+
+/* 若超过750px 按照750走 */
+
+@media screen and (min-width: 750px) {
+    html {
+        font-size: 75px!important;
+    }
+}
+
+body {
+    min-width: 320px;
+    max-width: 750px;
+    width: 10rem;
+    margin: 0 auto;
+    line-height: 1.5;
+    font-family: Arial, Helvetica;
+    /* height: 2000px; */
+    background-color: #fff;
+    /* background: -webkit-linear-gradient(top, #fff, #ccc); */
+}
+
+
+/* 头部 */
+
+header {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%);
+    width: 10rem;
+    display: flex;
+    padding: .266667rem;
+    height: 1.133333rem;
+    /* background-color: #fff; */
+}
+
+header .search {
+    position: relative;
+    flex: 1;
+    height: .6rem;
+    line-height: .6rem;
+    border-radius: .213333rem;
+    background-color: #fff;
+    border: 1px solid #0086f6;
+    font-size: .266667rem;
+    color: #9c9c9c;
+    padding-left: .6rem;
+    margin-left: .333333rem;
+    margin-right: .333333rem;
+}
+
+header .search .iconfont {
+    position: absolute;
+    top: 0;
+    left: .066667rem;
+    font-size: .533333rem;
+}
+
+header>.iconfont:nth-child(1) {
+    position: absolute;
+    top: .093333rem;
+    left: 0;
+    font-size: .666667rem;
+}
+
+header>.iconfont:nth-child(3) {
+    position: absolute;
+    top: .146667rem;
+    right: 0;
+    font-size: .533333rem;
+}
+
+
+/* nav */
+
+nav {
+    margin: 1.133333rem .266667rem .266667rem;
+}
+
+nav ul li {
+    float: left;
+    width: 33.3%;
+    text-align: center;
+    font-size: .533333rem;
+    padding: .266667rem;
+}
+
+nav ul li div {
+    /* background: #ccc; */
+    border: 1px solid #ccc;
+    border-radius: .133333rem;
+}
+
+nav ul li p {
+    font-size: .266667rem;
+}
+
+
+/* 内容 */
+
+.current {
+    font-weight: 700;
+    color: black!important;
+}
+
+.main .list {
+    color: #ccc;
+    position: relative;
+    height: .666667rem;
+    margin: 0 .533333rem;
+    font-size: .266667rem;
+    background-color: #fff;
+    border-bottom: .013333rem solid #ccc
+}
+
+.main .list .left {
+    line-height: .666667rem;
+    float: left;
+    margin: 0 .133333rem;
+}
+
+.main .list .right {
+    font-size: .066667rem;
+    position: absolute;
+    text-align: right;
+    top: .173333rem;
+    right: 0;
+    float: right;
+    height: .293333rem;
+    width: .933333rem;
+    border-top-left-radius: .2rem;
+    border-bottom-left-radius: .2rem;
+    line-height: .293333rem;
+    background-color: #e8f5fc;
+}
+
+.main .list .right>span {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    font-size: .266667rem;
+    color: #0f8eea;
+}
+
+.main .list .th li {
+    float: left;
+    width: 33.3%;
+    font-size: .2rem;
+    text-align: center;
+}
+
+.main .th li {
+    margin: 0 .533333rem 0;
+    height: 2.4rem;
+    background-color: #fff;
+    border-top-left-radius: .266667rem;
+    border-top-right-radius: .266667rem;
+    overflow: hidden;
+    font-size: .2rem;
+}
+
+.main .th .left {
+    padding: .266667rem;
+    float: left;
+    width: 30%;
+    height: 100%;
+    /* background-color: blue; */
+    /* margin-right: .133333rem; */
+}
+
+.main .th .left img {
+    width: 100%;
+    height: 100%;
+}
+
+.main .th li .right {
+    float: right;
+    padding: .266667rem;
+    width: 70%;
+}
+
+.main .th li .right p {
+    font-size: .466667rem;
+}
+
+.main .th li .right .place {
+    font-size: .266667rem;
+}
+
+.main .th li .right span {
+    float: right;
+}
+
+.two {
+    display: none;
+}
+
+.end {
+    font-size: .266667rem;
+    height: 50px;
+    line-height: 50px;
+    margin: 0 40px;
+    text-align: center;
+    color: #7cc6de;
+    background-color: #fff;
+}

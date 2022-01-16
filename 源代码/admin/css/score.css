@@ -1,0 +1,211 @@
+.clearfix:before,
+.clearfix:after {
+    content: "";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    *zoom: 1;
+}
+
+@font-face {
+    font-family: 'iconfont';
+    src: url('../fonts/iconfont.woff2?t=1632669694038') format('woff2'), url('../fonts/iconfont.woff?t=1632669694038') format('woff'), url('../fonts/iconfont.ttf?t=1632669694038') format('truetype');
+}
+
+a {
+    color: black;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.iconfont {
+    font-family: "iconfont" !important;
+    /* font-size: 16px; */
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+ul,
+p {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+
+/* 若超过750px 按照750走 */
+
+@media screen and (min-width: 750px) {
+    html {
+        font-size: 75px!important;
+    }
+}
+
+body {
+    min-width: 320px;
+    max-width: 750px;
+    width: 10rem;
+    margin: 0 auto;
+    line-height: 1.5;
+    font-family: Arial, Helvetica;
+    background: #f2f2f2;
+    height: 2000px;
+    /* background-color: #f9f9f9; */
+    /* background: -webkit-linear-gradient(top, chartreuse, aquamarine); */
+}
+
+
+/* 头部 */
+
+header {
+    z-index: 999;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%);
+    width: 10rem;
+    height: 1.333333rem;
+    background: -webkit-linear-gradient(top, #1c85d8, #0c96d3);
+    line-height: 1.333333rem;
+    padding-right: 5%;
+    padding-left: 5%;
+    font-size: .666667rem;
+    color: #fff;
+}
+
+.back {
+    float: left;
+}
+
+.icon-box {
+    float: right;
+    font-size: .333333rem;
+}
+
+
+/* main */
+
+.main {
+    padding: .266667rem;
+    font-size: .4rem;
+    margin: 0 auto;
+    margin-top: 1.6rem;
+    /* height: 5.333333rem; */
+    width: 95%;
+    background: #FFF;
+    border-radius: .266667rem;
+}
+
+.top {
+    /* margin-top: .133333rem;
+    margin-bottom: .133333rem; */
+    font-size: .666667rem;
+    font-weight: 700;
+    border-bottom: 1px solid #ccc;
+}
+
+.mes .th {
+    margin-top: .266667rem;
+    margin-bottom: .266667rem;
+    line-height: 1.333333rem;
+}
+
+.mes .th>img {
+    border-radius: 10px;
+    width: 1.333333rem;
+    height: 1.333333rem;
+}
+
+.leibie {
+    width: 15%;
+    float: left;
+    font-size: .4rem;
+}
+
+.mark {
+    float: left;
+    width: 85%;
+    background-color: transparent;
+}
+
+.Mes {
+    width: 100%;
+    padding: .133333rem;
+    text-indent: 2em;
+    /* height: 1rem; */
+}
+
+.pF {
+    height: 1rem;
+    line-height: 1rem;
+    font-weight: 700;
+}
+
+.peiSong {
+    margin-bottom: .266667rem;
+}
+
+.form-control {
+    margin-bottom: .266667rem;
+}
+
+
+/* 星星 */
+
+.mark ul {
+    padding-left: 0;
+    overflow: hidden;
+}
+
+.mark ul li {
+    float: left;
+    list-style: none;
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+
+.mark ul li a {
+    display: inline-block;
+    padding-top: 30px;
+    width: 50%;
+    overflow: hidden;
+}
+
+.halfStar {
+    background: url(../images/halfStar.png);
+    background-size: cover;
+}
+
+.fullStar {
+    background: url(../images/fullStar.png);
+    background-size: cover;
+}
+
+.emptyStar {
+    background: url(../images/emptyStar.png);
+    background-size: cover;
+}
+
+.btn {
+    /* margin: 0 auto; */
+    margin-top: .266667rem;
+    margin-left: 2.5%;
+    /* line-height: 1.333333rem; */
+    height: 1.333333rem;
+    border-radius: 10px;
+    width: 95%;
+    font-size: .533333rem;
+    color: white!important;
+    background: -webkit-linear-gradient(top, #1c85d8, #0c96d3);
+}
